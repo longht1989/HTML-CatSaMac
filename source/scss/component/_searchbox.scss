@@ -1,0 +1,23 @@
+/* Search & ulti box */
+
+.search {
+    &-wrap {
+        position: relative;
+        margin-top: 12px;
+        .form-control {
+            height: 30px;
+            font-size: 12px;
+        }
+        .fa-search {
+            cursor: pointer;
+            position: absolute;
+            right: 8px;
+            top: 6px;
+            font-size: 16px;
+            @include transition(all, 0.2, ease);
+            @include haf {
+                color: $brand-primary;
+            }
+        }
+    }
+}

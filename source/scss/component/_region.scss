@@ -1,0 +1,96 @@
+/* ====================================
+   All region in project
+   ==================================== */
+
+
+/* zone global style */
+
+.zone {
+    margin-bottom: 24px;
+    &__header {
+        margin-bottom: 12px;
+        font-family: $font-family-special;
+        font-size: 0;
+    }
+    &__title {
+        font-size: 16px;
+        line-height: 25px;
+        position: relative;
+        padding-bottom: 6px;
+        font-weight: bold;
+        margin-right: 12px;
+        color: $brand-primary;
+        &::after {
+            display: block;
+            width: 35px;
+            height: 2px;
+            content: '';
+            background: $brand-primary;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            @include transition(all, 0.2, linear);
+        }
+        &:hover {
+            color: $brand-success;
+            &::after {
+                background: $brand-success;
+            }
+        }
+        .zone--featured & {
+            color: white;
+            &::after {
+                background: white;
+            }
+            &:hover {
+                color: $brand-primary;
+                &:after {
+                    background: $brand-primary;
+                }
+            }
+        }
+    }
+    &__sub-title {
+        font-size: 12px;
+        line-height: 25px;
+        &+.zone__sub-title {
+            &::before {
+                content: '/';
+                padding-right: 8px;
+                margin-left: 8px;
+            }
+            &:hover {
+                &::before {
+                    color: #000;
+                }
+            }
+        }
+        .zone--featured & {
+            color: white;
+            &:hover {
+                color: $brand-primary;
+                &::before {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &__content {
+        @include clearfix();
+    }
+    &--grey {
+        background: #F4F4F4;
+        padding: 8px;
+    }
+    &--featured {
+        background: #111;
+        padding: 16px;
+    }
+}
+
+// ads
+.qc {
+    @include clearfix();
+    margin-bottom: 24px;
+    text-align: center;
+}

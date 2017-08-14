@@ -1,0 +1,50 @@
+/* ====================================
+   Footer's style
+   ==================================== */
+
+#site-footer {
+    margin-top: 32px;
+    @include clearfix;
+}
+
+.footer {
+    &__menu {
+        background: #F0F0F0;
+        padding: 12px 0px;
+        font-size: 0;
+        a {
+            color: #333;
+            width: 25%;
+            display: inline-block;
+            font-size: 16px;
+            line-height: 1.4em;
+            padding: 12px 0;
+            font-family: $font-family-special;
+            text-transform: uppercase;
+            vertical-align: top;
+            &:hover {
+                color: $brand-primary;
+            }
+        }
+    }
+    &__info {
+        background: #EAEAEA;
+        padding: 16px 0;
+        font-size: 0;
+        p {
+            color: #333;
+            font-size: 14px;
+            line-height: 1.4em;
+            &+p {
+                margin-top: 12px;
+            }
+        }
+    }
+    &__col {
+        width: 50%;
+        display: inline-block;
+        &:nth-child(2n) {
+            text-align: right;
+        }
+    }
+}
