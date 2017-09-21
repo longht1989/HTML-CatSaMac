@@ -81,13 +81,15 @@
         .content {
             // width: 440px;
             // float: left;
-            @include font-size(14, 19);
+            font-size: 14px;
+            line-height: 1.4em;
+            text-align: justify;
             p,
             div,
             h3,
             h4,
             h5 {
-                margin-bottom: 10px;
+                margin-bottom: 12px;
                 margin-top: 0;
             }
             img {
@@ -445,7 +447,8 @@
         .tag-label {
             font-size: 12px;
             display: inline-block;
-            margin: 0 16px 0 0;
+            margin-right: 16px;
+            margin-bottom: 8px !important;
             padding-top: 2px;
             font-weight: bold;
             float: left;
@@ -466,6 +469,49 @@
                     background: $brand-primary;
                 }
             }
+        }
+    }
+    /* article react */
+    &__react {
+        .like {
+            &-wrap {
+                border-radius: 3px;
+                border: 1px solid $brand-success;
+                font-size: 14px;
+                line-height: 24px;
+                cursor: pointer;
+                margin-bottom: 0 !important;
+                .fa {
+                    width: 24px;
+                    line-height: 24px;
+                    text-align: center;
+                    color: white;
+                    background: $brand-success;
+                    transition: all 0.2s linear;
+                }
+                &:hover {
+                    .fa {
+                        background: darken($brand-success, 10%);
+                    }
+                }
+                &.is-done {
+                    cursor: not-allowed;
+                    border-color: #999;
+                    .fa {
+                        background: #999;
+                        &::before {
+                            content: "";
+                        }
+                    }
+                }
+            }
+            &__count {
+                padding: 0 6px;
+            }
+        }
+        .pull-right,
+        .pull-left {
+            margin-bottom: 0 !important;
         }
     }
 }
