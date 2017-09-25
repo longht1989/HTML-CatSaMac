@@ -20,6 +20,7 @@
         font-weight: bold;
         margin-right: 12px;
         color: $brand-primary;
+        text-transform: uppercase;
         &::after {
             display: block;
             width: 35px;
@@ -49,9 +50,12 @@
                 }
             }
         }
+        .sidebar-col & {
+            text-transform: none;
+        }
     }
     &__sub-title {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 25px;
         &+.zone__sub-title {
             &::before {
@@ -73,6 +77,9 @@
                     color: #fff;
                 }
             }
+        }
+        .sidebar-col & {
+            font-size: 12px;
         }
     }
     &__content {

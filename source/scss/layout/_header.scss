@@ -94,6 +94,10 @@
                 background-color: #eee;
                 color: $brand-primary;
             }
+            img {
+                position: relative;
+                top: -1px;
+            }
         }
         &:hover {
             .navigator__child {

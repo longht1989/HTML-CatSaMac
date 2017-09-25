@@ -82,11 +82,19 @@
         float: right;
     }
     &--group {
-        width: 652px;
+        width: 636px;
         float: left;
         @include clearfix;
-        margin-left: -8px;
-        margin-right: -8px;
+        // margin-left: -8px;
+        // margin-right: -8px;
+        .story--featured {
+            width: 310px;
+            float: left;
+        }
+        .story-listing {
+            width: 310px;
+            float: right;
+        }
     }
     &--column {
         width: 50%;
